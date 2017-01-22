@@ -12,3 +12,11 @@ If you care about versioning, create a tag/release for the version (such as v1.0
 
 ### Step 3: Run bundler.py on your Server
 Finally, run the `bundler.py` script on your server. You can use `cron` if you'd like create nightly builds.
+
+File Format
+-----------
+Your file that contains repo data should be a pipe (|) delimited file, with either 2 or 3 elements:
+
+```
+repo_name|repo_url|<option_tag_or_branch>
+```

@@ -29,7 +29,11 @@ for line in open(file_name).read().split("\n"):
 
     if line == "": continue
 
-    repo_dir, git_url = line.split("|")
+    splitted = line.split("|")
+
+    repo_dir, git_url = splitted[:2]
+    if len(splitted) == 3:
+        tag = splitted[2]
 
     print "Cloning %s to %s..." % (git_url, repo_dir)
 
